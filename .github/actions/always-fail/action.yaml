@@ -9,3 +9,7 @@ runs:
     - name: Doesn't run
       shell: bash
       run: echo "Doesn't run"
+    - name: Always runs
+      if: ${{ always() }}
+      shell: bash
+      run: echo "Always runs"
