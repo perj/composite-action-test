@@ -1,0 +1,11 @@
+name: Always fail
+description: A composite action that always fails.
+runs:
+  using: composite
+  steps:
+    - name: Fail
+      shell: bash
+      run: /bin/false
+    - name: Doesn't run
+      shell: bash
+      run: echo "Doesn't run"

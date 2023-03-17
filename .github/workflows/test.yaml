@@ -1,0 +1,12 @@
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/always-fail
+      - name: Does this run
+        run: |
+          echo "Does this run?"
